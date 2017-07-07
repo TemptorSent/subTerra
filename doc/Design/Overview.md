@@ -1,14 +1,17 @@
 # Overview of subTerra System Tools
 
 ## Security
+
+### Goals
  - **Utilize Web-of-Trust type semantics.**
  - **Hash and sign all artifacts at the lowest appropriate layer.**
- - **Hash and sign known combinations of artifacts.**
+ - **Hash and sign known valid combinations of artifacts.**
  - **Optionally require all artifacts to be countersigned by specific trusted keys.**
- - **Allow creation of immutable deployment environments where appropriate.**
  - **Minimize complexity of auditing.**
  - **Provide for complete logging.**
-
+ - **Allow creation of immutable deployment environments where appropriate.**
+ - **Support encrypted images/devices with detached headers on removable device.**
+ - **Establish blacklist/whitelist for specific hashes/signatures to enforce security mitigation.**
 
 ## Testing Framework
 
@@ -35,7 +38,7 @@
  - **Use modular build architecture allowing use of various sources for build scripts.**
  - **All builds are handled as cross-builds in sterile environment defined by their build dep chain only**
  - **Make builds repeatable wherever possible - non-repeatable builds will require explicit whitelisting to be fully packaged.**
- - **Allow subsets of a package to be isolated and installed independently where applicable.
+ - **Allow subsets of a package to be isolated and installed independently where applicable.**
 
 
 ## Package Management
@@ -60,5 +63,4 @@
  - **Allow creation of individualized fully configured images for direct deployment.**
  - **Allow multiple images to coexist in the bootloader, optionally utilizing the same configuration and/or data.**
  - **Allow creation of bare-metal or VM raw disk images.**
-
-
+ - **Allow creation of immutable images and include support for booting off R/O physical devices.**
